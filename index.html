@@ -5,25 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">    
 </head>
 <body>
     <main>
         <!-- Section Input Form -->
-        <section>
+        <section class="col-5">
             <div>
                 <header>
                     <h1>Kalkulator BMI</h1>
                 </header>        
                 <article>
-                    <p>BMI adalah</p>
+                    <p>BMI (Body Mass Index) adalah indikator untuk menentukan kategori berat badan ideal atau tidak. BMI dihitung dengan membagi berat badan (dalam kilogram) dengan kuadrat tinggi badan (dalam meter). Yuk hitung berat badan idealmu.</p>
                 </article>
             </div>
             <div>
-                <form class="color-section" action="">                
-                    <label for="berat_badan">Berat Badan:</label>
+                <form class="color-section" action="">
+                    <span>Jenis Kelamin</span><br>
+                    <input type="radio" name="gender" value="pria"> Pria <input type="radio" name="gender" value="wanita"> Wanita                
+                    <br><br>
+                    <label for="berat_badan">Berat Badan (kg)</label>
                     <input type="text" id="berat_badan">
                     <br>
+                    <label for="usia">Usia (Tahun)</label>
+                    <input type="text" id="usia">
+                    <label  for="tinggi_badan">Tinggi Badan (cm)</label>
+                    <input type="text" id="tinggi_badan">
+                    <br><br>
                     <button>Hitung BMI</button>
                     <button>Reset</button>                
             </form>
@@ -31,14 +39,26 @@
             
             <div>
                 <header>
-                    <h2>Kalkulasi BMI</h2>
+                    <h4>Apakah BMI Bisa Jadi Parameter Berat Badan Ideal?</h4>
                 </header>
                 <article>
-                    <p>Lorem ipsum</p>
+                    <p>Rumus BMI tidaklah sepenuhnya akurat dan akan dimaknai berbeda pada kasus tertentu. Misalkan bagi atlet binaraga dan ibu hamil, angka BMI yang tinggi tidak berarti bahwa mereka memiliki lemak berlebih atau tidak sehat. Selain itu, pada anak-anak dan remaja, perhitungan ini perlu disesuaikan dengan usia maupun jenis kelaminnya.</p>
+                    <p>Di sisi lain, Anda juga tidak bisa mengandalkan BMI sebagai satu-satunya parameter dalam melihat masalah kesehatan. Biasanya, terdapat beberapa faktor lain yang menjadi pertimbangan tim medis dalam meninjau tingkat kesehatan seseorang, di antaranya: 
+                        <ul>                    
+                            <li>Aktivitas fisik.</li>
+                            <li>Ukuran lingkar pinggang.</li>
+                            <li>Riwayat kesehatan keluarga.</li>
+                            <li>Ukuran ketebalan lipatan kulit.</li>
+                            <li>Kadar kolesterol</li>
+                            <li>Kadar gula darah</li>
+                            <li>Tekanan darah</li>
+                            <li>Detak jantung</li>
+                        </ul>
+                    </p>
                 </article>
             </div>
         </section>
-        <section>
+        <section class="col-5">
             <header>
                 <h1>Hasil</h1>            
             </header>
