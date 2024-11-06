@@ -32,43 +32,46 @@ function validasiTB() {
 
 // Validasi jenis kelamin dan hitung rumus BMI
 function hitung(e) {   
-        var jk = document.querySelector('input[name="gender"]:checked');
+        let jk = document.querySelector('input[name="gender"]:checked');
         const beratBadan = document.getElementById("berat_badan").value;
         const tinggiBadan = document.getElementById("tinggi_badan").value;        
-        var bmi = "";
+        let bmi = "";
         if(jk == null) {
             alert("pilih jenis kelamin");
         } else {            
             tinggi = tinggiBadan / 100;            
             t = parseFloat(tinggi**2);             
             bmi = parseFloat(beratBadan / t);
+            roundedBMI = Math.round(bmi * 100) / 100;  
 
+            let bg = "";
+            let kat = "";
+            let saran = "";
             if (bmi < 18.5) {
                 e.preventDefault();
-                roundedBMI = Math.round(bmi * 100) / 100;  
-                document.getElementById("hasil-bmi").style.background = "aliceblue";
-                document.getElementById("kategori").innerHTML = "Kekurangan Berat Badan";               
-                document.getElementById("result").innerHTML = roundedBMI;  
-                document.getElementById("artikel").innerHTML = "Anda berada dalam kategori kekurangan berat badan";  
+                bg = "#56badc";
+                kat = "Kekurangan Berat Badan";
+                saran = "Anda berada dalam kategori kekurangan berat badan";                  
             } else if (bmi >= 18.5 && bmi < 25 ) { 
                 e.preventDefault();
-                roundedBMI = Math.round(bmi * 100) / 100;
-                document.getElementById("hasil-bmi").style.background = "#84b284";
-                document.getElementById("kategori").innerHTML = "Berat Badan Ideal";               
-                document.getElementById("result").innerHTML = roundedBMI;
+                bg = "#84b284";
+                kat = "Berat Badan Ideal";
+                saran = "Anda berada dalam kategori berat badan ideal";                  
             } else if (bmi >= 25 && bmi < 30 ) {
                 e.preventDefault();
-                roundedBMI = Math.round(bmi * 100) / 100;
-                document.getElementById("hasil-bmi").style.background = "#f5c139";
-                document.getElementById("kategori").innerHTML = "Kelebihan Berat Badan";               
-                document.getElementById("result").innerHTML = roundedBMI;                
+                bg = "#f5c139";
+                kat = "Kelebihan Berat Badanl";
+                saran = "Anda berada dalam kategori kelebihan berat badan";                  
             } else {
                 e.preventDefault();
-                roundedBMI = Math.round(bmi * 100) / 100;
-                document.getElementById("hasil-bmi").style.background = "#f3947e";
-                document.getElementById("kategori").innerHTML = "Obesitas";               
-                document.getElementById("result").innerHTML = roundedBMI;
+                bg = "#f3947e";
+                kat = "Obesitas";
+                saran = "Anda berada dalam kategori obesitas";                  
             }
+            document.getElementById("hasil-bmi").style.background = bg;
+            document.getElementById("kategori").innerHTML = kat;               
+            document.getElementById("result").innerHTML = roundedBMI;
+            document.getElementById("artikel").innerHTML = saran;  
         }
     }
     
