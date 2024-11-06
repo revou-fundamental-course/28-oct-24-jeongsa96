@@ -21,7 +21,7 @@
             </div>
             <div>
                 <!-- Form input data  -->
-                <form class="color-section">
+                <form class="color-section padding-bot">
                     <span>Jenis Kelamin</span><br>
                     <input type="radio" name="gender" id="pr" value="pria"> Pria <input type="radio" name="gender" id="wa" value="wanita"> Wanita                
                     <br><br>
@@ -33,9 +33,11 @@
                     <label>Tinggi Badan (cm)</label>
                     <input type="text" id="tinggi_badan">
                     <br><br>
+                </form>
+                <div class="color-section padding-top">
                     <button type="submit" onclick="hitung(event)">Hitung BMI</button>
                     <button onclick="resetForm()">Reset</button>                
-            </form>
+                </div>
             </div>
             <!-- DIV artikel tentang BMI -->
             <div>
@@ -74,7 +76,7 @@
             </section>
             <!-- Artikel hasil pembagian kategori BMI -->
             <article>
-                <p id="artikel"></p>
+                <p id="artikel"></p>                
             </article>
             
         </section>

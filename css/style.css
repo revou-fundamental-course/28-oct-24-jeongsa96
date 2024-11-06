@@ -13,6 +13,7 @@ main {
     background-color: aliceblue;
     padding: 8px;
     border: 10px;
+    border-radius: 6px;
     width: 100%;
 }
 
@@ -42,4 +43,19 @@ ul {
 footer {
     text-align: center;
     display: block;
+}
+
+.padding-top {
+    padding-top: 0px;
+}
+
+.padding-bot {
+    padding-bottom: 0px;
+}
+
+@media (max-width: 480px) {
+    main {
+        flex-direction:column;
+        align-items: center;
+    }
 }
